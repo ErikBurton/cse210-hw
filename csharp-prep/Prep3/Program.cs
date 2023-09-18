@@ -1,15 +1,13 @@
 using System;
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello Prep3 World!");
-    
+namespace NumberGuesser {
 
+    class Program {
+        static void Main(string[] args)
+    {
             // Step 1 - ask user for magic number
             Console.Write("Enter the magic number: ");
-            int magicNumber int.Parse(Console.ReadLine());
+            int magicNumber = int.Parse(Console.ReadLine());
 
             int guess;
 
@@ -18,17 +16,16 @@ class Program
                 Console.Write("Enter your guess: ");
                 guess = int.Parse(Console.ReadLine());
 
-            if(guess < magicNumber) {
-                Console.Write("Higher!");
-            } else if (guess > magicNumber) {
-                Console.Write("Lower!");
-            } else {
-                Console.Write("You guessed it!");
-            }
+                if(guess < magicNumber) {
+                    Console.Write("Higher!");
+                } else if (guess > magicNumber) {
+                    Console.Write("Lower!");
+                } else {
+                    Console.Write("You guessed it!");
+                }
             } while (guess != magicNumber);
 
 
         }
     }
-}
 }
