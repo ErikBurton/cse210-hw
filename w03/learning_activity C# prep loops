@@ -1,0 +1,17 @@
+using System;
+
+namespace NumberGuesser {
+    
+    class Program {
+        static void Main(string[] args) {
+
+            // Step 1 - ask user for magic number
+            Console.Write("Enter the magic number: ");
+            int magicNumber int.Parse(Console.ReadLine());
+
+            int guess;
+
+
+        }
+    }
+}
