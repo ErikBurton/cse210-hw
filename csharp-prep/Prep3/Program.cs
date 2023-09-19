@@ -1,31 +1,37 @@
 using System;
 
-namespace NumberGuesser {
-
-    class Program {
-        static void Main(string[] args)
+    class Program 
     {
-            // Step 1 - ask user for magic number
-            Console.Write("Enter the magic number: ");
-            int magicNumber = int.Parse(Console.ReadLine());
+        static void Main(string[] args) 
+        {
+            // Step 1 - Ask user for a magic number
+            // Console.Write("What is your magic number? ");
+            // int magicNumber = int.Parse(Console.ReadLine());
 
-            int guess;
+            // Step 3 - Generate a random number from 1 to 100
+             Random randomGenerator = new Random();
+             int magicNumber = randomGenerator.Next(1, 101);
 
-            // Step 2 - loop until guess is correct
-            do {
-                Console.Write("Enter your guess: ");
+            int guess = -1;
+
+            // Step 2 - Add a loop
+            while (guess != magicNumber)
+            {
+                Console.Write("What is your guess? ");
                 guess = int.Parse(Console.ReadLine());
 
-                if(guess < magicNumber) {
-                    Console.Write("Higher!");
-                } else if (guess > magicNumber) {
-                    Console.Write("Lower!");
-                } else {
-                    Console.Write("You guessed it!");
+                if(magicNumber > guess)
+                {
+                    Console.WriteLine("Higher!");
                 }
-            } while (guess != magicNumber);
-
-
+                else if (magicNumber < guess)
+                {
+                    Console.WriteLine("Lower!");
+                }
+                else
+                {
+                    Console.WriteLine("You guessed it!");
+                }
+            }
         }
     }
-}
