@@ -5,23 +5,18 @@ class Program
 {
     static void Main(string[] args)
     {
-        Person p1 = new Person();
-        p1._firstName = "Mary";
-        p1._lastName = "Smith";
-        p1._age = 25;
+       Journal journal = new Journal();
+       PromptGenerator prompts = new PromptGenerator();
 
-        Person p2 = new Person();
-        p2._firstName = "Erik";
-        p2._lastName = "Burton";
-        p2._age = 55;
+       // Get random prompts and response
+       string prompts = prompts.GetRandomPrompt();
+       string response = GetUserResponse();
 
-        List<Person> people = new List<Person>();
-        people.Add(p1);
-        people.Add(p2);
+       // Create entry
+       Entry entry = new Entry(prompts, response, DateTime.Now);
 
-        foreach (Person p in people)
-        {
-            Console.WriteLine(p._firstName);
-        }
+       // Add entry to journal
+       journal.AddEntry(entry);
+     
     }
 }
