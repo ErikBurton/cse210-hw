@@ -19,7 +19,7 @@ public class Entry
     }
 
 // ToString method provides formatted string repsenstation of the entry
-    private override string ToString()
+    public override string ToString()
     {
         return $"{Date}\nPrompt: {Prompt}\nResponse: {Response}\n";
     }

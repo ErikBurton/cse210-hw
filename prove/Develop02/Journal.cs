@@ -5,12 +5,12 @@ public class Journal
 {
     private List<Entry> entries = new List<Entry>();
 
-    public void AddEntry(string prompt, string response, string date)
+    public void AddEntry(string prompt, string response, string date) // Method to add a new entry
     {
-        entries.Add(new Entry(prompt.Normalize response, date));
+        entries.Add(new Entry(prompt, response, date));
     }
 
-    public void DisplayEntries()
+    public void DisplayEntries() // Method to display all journal entries
     {
         foreach (var entry in entries)
         {
@@ -18,13 +18,13 @@ public class Journal
         }
     }
 
-    public void SaveToFile(string filename)
+    public void SaveToFile(string filename) // Method to save the journal entries to a file
     {
         using (StreamWriter writer = new StreamWriter(filename))
         {
             foreach (var entry in entries)
             {
-                writer.WriteLine($"{entry.Date} | {entry.Prompt} | {entry.Response}");
+                writer.WriteLine($"{entry.Date} | {entry.Prompt} | {entry.Response}"); // Save entry as a string with '|' as the seperator
             }
         }
     }
