@@ -75,11 +75,6 @@ class Program
                         break;          
                 }
             }
-            else
-            {
-                // Handle invalid user input (not a valid number)
-                Console.WriteLine("Invalid input. Please enter a valid number. ");
-            }
        }       
     }
 }
