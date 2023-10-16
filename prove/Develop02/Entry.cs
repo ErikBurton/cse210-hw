@@ -11,7 +11,7 @@ public class Entry
     public string Date { get; }
 
     // Constructor to create a new jounal entry
-    private Entry(string prompt, string response, string date)
+    public Entry(string prompt, string response, string date)
     {
         Prompt = prompt;
         Response = response;
