@@ -15,7 +15,8 @@ class Program
             Console.WriteLine("1. Write a new entry");
             Console.WriteLine("2. Display the Journal");
             Console.WriteLine("3. Save the journal to a file");
-            Console.WriteLine("4. Exit");
+            Console.WriteLine("4. Load the journal from a file");
+            Console.WriteLine("5. Exit");
 
             int choice;
             if (int.TryParse(Console.ReadLine(), out choice))
@@ -23,12 +24,7 @@ class Program
                 // Use a switch statement to process the user's menu choice
                 switch (choice)
                 {
-                    case 1:
-                        // Prompt use to enter a response and date
-                        Console.WriteLine("Enter your response: ");
-                        string response = Console.ReadLine();
-                        Console.WriteLine("Enter the date: ");
-                        string date = Console.ReadLine();
+                    case 1:                        
                         string[] prompts = {
                             "Who was the most interesting person I interacted with today?",
                             "What was the best part of my day?",
@@ -39,6 +35,14 @@ class Program
 
                         // Selects a random prompt from the prompts array
                         string randomPrompt = prompts[new Random().Next(prompts.Length)];
+
+                        // Prompts the user to enter a response and date
+                        Console.WriteLine("Prompt: " + randomPrompt);
+                        Console.WriteLine("Enter your response: ");
+                        string response = Console.ReadLine();
+                        Console.WriteLine("Enter the date: ");
+                        string date = Console.ReadLine();
+
 
                         // Add user's entry to the journal
                         journal.AddEntry(randomPrompt, response, date);
@@ -55,6 +59,13 @@ class Program
                         journal.SaveToFile(saveFilename);
                         break;
                     case 4:
+                        // Prompt use to enter a filename to load the journal from
+                        Console.WriteLine("Enter the filename to load the journal from: ");
+                        string loadFileName = Console.ReadLine();
+                        // Load the journal entries from the specfied file
+                        journal.LoadFromFile(loadFileName);
+                        break;
+                    case 5:
                         // Exit the program
                         Environment.Exit(0);
                         break;
