@@ -6,8 +6,8 @@ using System.Runtime.CompilerServices;
 public class Entry
 {
     // 3 properties for Entry class
-    private string Prompt { get; }
-    private string Response { get; }
+    public string Prompt { get; }
+    public string Response { get; }
     public string Date { get; }
 
     // Constructor to create a new jounal entry
