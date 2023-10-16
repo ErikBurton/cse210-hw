@@ -29,4 +29,22 @@ public class Journal
         }
     }
 
+    public void LoadFromFile(string filename)
+    {
+        entries.Clear(); // Clear existing entries
+
+        if (File.Exists(filename))
+        {
+            string[] lines = File.ReadAllLines(filename); // Real all line from the file into an array
+            foreach (string line in lines) // Loop through each line in the file.
+            {
+                string[] parts = line.Split("|"); // Split the line into parts using '|' pipe as a seperator
+                if (parts.Length == 3) // Check if there are exactly 3 parts (date, prompt, repsponse)
+                {
+                    AddEntry(parts[1], parts[2], parts[0]); // Add a new entry using extracted date, prompt and response
+                }
+            }
+        }
+    }
+
 }
