@@ -1,26 +1,32 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 public class Journal
 {
-    public List<Entry> entries = new List<Entry>();
-    
-    public void AddEntry(Entry entry)
+    private List<Entry> entries = new List<Entry>();
+
+    public void AddEntry(string prompt, string response, string date)
     {
-        entries.Add(entry);
+        entries.Add(new Entry(prompt.Normalize response, date));
     }
 
-    public void LoadEntry()
+    public void DisplayEntries()
     {
-
+        foreach (var entry in entries)
+        {
+            Console.WriteLine(entry);
+        }
     }
 
-    public void SaveEntry()
+    public void SaveToFile(string filename)
     {
-
+        using (StreamWriter writer = new StreamWriter(filename))
+        {
+            foreach (var entry in entries)
+            {
+                writer.WriteLine($"{entry.Date} | {entry.Prompt} | {entry.Response}");
+            }
+        }
     }
 
-    public void DisplyEntry()
-    {
-
-    }
 }
