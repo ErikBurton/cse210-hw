@@ -4,19 +4,19 @@ using System;
 class MathAssignment : Assignment
 {
     // Private member variables specific to MathAssignment
-    private int assignmentNumber;
-    private string homeworkDescription;
+    private string textbookSection;
+    private string problems;
 
     // Constructor for MathAssignment
-    public MathAssignment(string studentName, string topic, int assignmentNumber, string homeworkDescription)
+    public MathAssignment(string studentName, string topic, string textbookSection, string problems)
         : base(studentName, topic)
         {
-            this.assignmentNumber = assignmentNumber;
-            this.homeworkDescription = homeworkDescription;
+            this.textbookSection = textbookSection;
+            this.problems = problems;
         }
     // Method to get the homework list
     public string GetHomeWorkList()
     {
-        return $"Assignment Number: {assignmentNumber}, Homework Description: {homeworkDescription}";
+        return $"Textbook Section: {textbookSection}, Problems: {problems}";
     }
 }
