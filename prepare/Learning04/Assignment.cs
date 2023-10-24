@@ -1,6 +1,6 @@
 using System;
 
-public class Assignment
+class Assignment
 {
     //  Private member variables
     private string studentName;
