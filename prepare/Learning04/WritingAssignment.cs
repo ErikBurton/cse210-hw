@@ -16,15 +16,8 @@ class WritingAssignment : Assignment
     // Method to get writing info
     public string GetWritingInformation()
     {
-        string studentName = GetStudentName(); // Access the studentName
         return $"Student Name: {studentName}, Topic: {topic}, Title: {title}";
     }
-
-    // Public method to get the studentname attribute for the base class
-    public string GetStudentName()
-    {
-        return studentName;
-    }
-
-
 }
+
+

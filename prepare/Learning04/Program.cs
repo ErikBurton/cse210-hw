@@ -4,18 +4,18 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Create a new mathAssignment instance
-        MathAssignment mathAssignment = new MathAssignment("Erik Burton", "Drum Set Performance", "Independence", "Paradiddles");
+        // Create a new WritingAssignment instance
+        WritingAssignment writingAssignment = new WritingAssignment("Erik Burton", "Independence", "Get Funky");
 
         // Call the GetSummary method from the base class
-        string summary = mathAssignment.GetSummary();
+        string summary = writingAssignment.GetSummary();
         Console.WriteLine("Assignment Summary");
         Console.WriteLine(summary);
 
-        // Call the GetHomeworkList method from the derived list
-        string homeworkList = mathAssignment.GetHomeWorkList();
-        Console.WriteLine("\nHomework List:");
-        Console.WriteLine(homeworkList);
+        // Call the GetWritingAssignment method from the derived list
+        string writingInfo = writingAssignment.GetWritingInformation();
+        Console.WriteLine("\nWriting Assignment:");
+        Console.WriteLine(writingInfo);
 
     }
 }

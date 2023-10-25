@@ -2,9 +2,9 @@ using System;
 
 class Assignment
 {
-    //  Private member variables
-    private string studentName;
-    private string topic;
+    //  Protected member variables
+    protected string studentName;
+    protected string topic;
 
     // Constructor to initialize member variables
     public Assignment(string studentName, string topic)
