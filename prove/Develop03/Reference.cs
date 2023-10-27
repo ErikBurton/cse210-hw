@@ -7,6 +7,12 @@ class Reference
     // Constructor for creating a Reference object
     public Reference(string referenceText)
     {
-        ReferenceText = referenceText;
+        ReferenceText = referenceText; // Initializes the ReferenceText property with referenceText
+    }
+
+    // Method override toString    
+    public override string ToString()
+    {
+        return ReferenceText; // Text to show the reference when ToString() is called
     }
 }
