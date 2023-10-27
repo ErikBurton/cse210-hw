@@ -6,7 +6,7 @@ class Word
 
     private bool hidden; // Private field to track if the word is hidden
 
-    public Word(string text);
+    public Word(string text)
     {
         this.text = text;
         hidden = false;
