@@ -1,14 +1,12 @@
 // Word class represents one word in the scripture
 
-using System.ComponentModel.DataAnnotations;
-
 class Word 
 {
-    private string text; // Make attribute private to encapsulate it
+    private string text; // Make attribute private to encapsulate it. Private field to store the word's text
 
-    private bool hidden;
+    private bool hidden; // Private field to track if the word is hidden
 
-    public Word(string text)
+    public Word(string text);
     {
         this.text = text;
         hidden = false;
@@ -23,4 +21,14 @@ class Word
     {
         return text; // Getter method to access the private attribute
     }
+
+    public bool IsHidden()
+    {
+        return hidden;
+    }
+
+    public override string ToString()
+    {
+        return hidden ? "______" : text;
+    }        
 }
