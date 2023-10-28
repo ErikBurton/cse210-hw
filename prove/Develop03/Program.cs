@@ -1,14 +1,23 @@
-using System;
+string referenceText = "John 3:16";
 
-class Program
+static string? GetUserInput()
 {
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello Develop03 World!");
-    }
+    return Console.ReadLine();
 }
 
-// What does the program do? - Helps someone memorize scripture by hiding parts of the scripture so it can be memorized.
-// What user inputs does it have? - None: Enter or quit
-// What output does it produce? - Whole scripture and hides words when the user hits Enter.
-// How does the program end? - The program can end either by the user typing "quit" or when all of the words in the scripture have been hidden.
+// Scripture reference and text
+string scriptureText = "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.";
+
+Scripture scripture = new Scripture(referenceText, scriptureText);
+
+// Main loop. Allow user to hide words in the scripture
+while (!scripture.AllWordsHidden())
+{
+    Console.Clear();
+    Console.WriteLine(scripture);
+    Console.WriteLine("Press Enter to hide a word or type 'quit' to exit. ");
+    string userInput = GetUserInput() ?? "";
+
+    if (userInput.ToLower() == "quit")
+        break;
+}
