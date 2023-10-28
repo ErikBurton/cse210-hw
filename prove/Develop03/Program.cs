@@ -1,3 +1,5 @@
+#nullable enable
+
 string referenceText = "John 3:16";
 
 static string? GetUserInput()
