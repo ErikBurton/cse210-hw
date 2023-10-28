@@ -4,7 +4,7 @@ class Word
 {
     private string text; // Make attribute private to encapsulate it. Private field to store the word's text
 
-    private bool Hidden { get; private set; } // Add Hidden property with a private setter
+    public bool Hidden { get; private set; } // Add Hidden property with a private setter
 
     public Word(string text) // Constructor for creating Word oject
     {

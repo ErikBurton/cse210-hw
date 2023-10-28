@@ -20,4 +20,10 @@ while (!scripture.AllWordsHidden())
 
     if (userInput.ToLower() == "quit")
         break;
+
+    scripture.HideRandomWord();
+
+// Show the final scripture with hidden words
+Console.Clear();
+Console.WriteLine(scripture);
 }
