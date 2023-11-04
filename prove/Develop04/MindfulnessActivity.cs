@@ -26,7 +26,7 @@ class MindfulnessActivity
     // End method for mindfulness activity
     public virtual void End()
     {
-        ShowActivityComnpletion();
+        ShowActivityCompletion();
         CongratulateUser();
     }
 
@@ -37,11 +37,30 @@ class MindfulnessActivity
         SetDuration = int.Parse(Console.ReadLine());
     }
 
-    // Method to display the starting message.
+    // Method to display the starting message
     protected void ShowStartingMessage()
     {
         Console.WriteLine($"=== {name} ===");
         Console.WriteLine(description);
+    }
+
+     // Method to prepare the user to begin the activity
+    protected void PrepareToBegin()
+    {
+        Console.WriteLine("Get ready to begin in 3 seconds...");
+        Thread.Sleep(3000);
+    }
+
+    // Method to show the completion message
+    protected void ShowActivityCompletion()
+    {
+        Console.WriteLine($"You have completed the {name} for {duration} seconds.");
+    }
+
+    // Method to congratulate the user
+    protected void CongratulateUser()
+    {
+        Console.WriteLine("Great job! Keep practicing mindfulness.");
     }
 
 
