@@ -83,6 +83,15 @@ class MindfulnessActivity
 
         int animationIndex = 0;
 
+        while (DateTime.Now < endTime) // Loop to display spinner animation
+        {
+            Console.Write(animationStrings[animationIndex]);
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
 
-
+            // Move to the next animation string
+            animationIndex = (animationIndex + 1) % animationStrings.Count;
+        }
+        Console.WriteLine();
+    }
 }
