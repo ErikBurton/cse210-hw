@@ -30,6 +30,20 @@ class MindfulnessActivity
         CongratulateUser();
     }
 
+    // Method to set the duration
+    protected void SetDuration()
+    {
+        Console.Write("Enter the duration (in seconds): ");
+        SetDuration = int.Parse(Console.ReadLine());
+    }
+
+    // Method to display the starting message.
+    protected void ShowStartingMessage()
+    {
+        Console.WriteLine($"=== {name} ===");
+        Console.WriteLine(description);
+    }
+
 
 
 }
