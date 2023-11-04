@@ -27,7 +27,7 @@ class MindfulnessActivity
     public virtual void End()
     {
         ShowActivityComnpletion();
-        CongratulateUser()
+        CongratulateUser();
     }
 
 
