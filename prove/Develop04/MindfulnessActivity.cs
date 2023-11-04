@@ -63,6 +63,26 @@ class MindfulnessActivity
         Console.WriteLine("Great job! Keep practicing mindfulness.");
     }
 
+     // Method to show spinner animation for given number of seconds
+    protected void ShowSpinner(int seconds)
+    {
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(seconds);
+
+        List<string> animationStrings = new List<string>
+        {
+            "|",
+            "/",
+            "-",
+            "\\",
+            "|",
+            "/",
+            "-",
+            "\\"
+        };
+
+        int animationIndex = 0;
+
 
 
 }
