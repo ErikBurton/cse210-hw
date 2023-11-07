@@ -1,7 +1,7 @@
 // Class to represent shapes
 public class Shape
 {
-    private string _color; // Private member to store the color of the shape
+    private string _color; // Private variable to store the color of the shape
 
     public Shape(string color) // Constructor to initialze the color
     {
