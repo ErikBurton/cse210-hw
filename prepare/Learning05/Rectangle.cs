@@ -10,4 +10,9 @@ public class Rectangle
             _length = length;
             _width = width;
         }
+
+    public override double GetArea() // Polymorphisim: Override the GetArea for rectangles to calculate the area
+    {
+        return _length * _width; // Calculate the area of the rectangle
+    }
 }
