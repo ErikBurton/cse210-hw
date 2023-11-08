@@ -1,5 +1,5 @@
 // Class for Square
-public class Square : Shape
+public class Square : Shape // Inherits from the base class
 {
     private double _side; // Private variable to store side of a square
 
