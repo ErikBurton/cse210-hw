@@ -4,7 +4,7 @@ public class Circle : Shape // Inherits from the base class
 {
     private double _radius; // Private variable to store radius
 
-    private Circle(string color, double radius) // Constructor to initialize color and radius
+    public Circle(string color, double radius) // Constructor to initialize color and radius
         : base(color)
     {
         _radius = radius;
