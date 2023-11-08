@@ -1,5 +1,5 @@
 // Classs for a rectangle
-public class Rectangle
+public class Rectangle : Shape // Inherits from the base class
 {
     private double _length; // Private variable to store the length
     private double _width; // Private variable to store the width
