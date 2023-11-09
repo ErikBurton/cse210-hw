@@ -34,7 +34,7 @@ class MindfulnessActivity
     protected void SetDuration()
     {
         Console.Write("Enter the duration (in seconds): ");
-        SetDuration = int.Parse(Console.ReadLine());
+        duration = int.Parse(Console.ReadLine());
     }
 
     // Method to display the starting message
