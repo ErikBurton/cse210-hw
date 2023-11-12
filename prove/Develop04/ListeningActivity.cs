@@ -1,6 +1,6 @@
 using System;
 
-class ListeningActivity
+class ListingActivity : MindfulnessActivity
 {
      private string[] prompts = {
         "Who are people that you appreciate?",
@@ -9,4 +9,41 @@ class ListeningActivity
         "When have you felt the Holy Ghost this month?",
         "Who are some of your personal heroes?"
     };
+
+     public ListingActivity() : base("Listing Activity", "This activity will help you list positive things in your life.")
+    {
+    }
+
+    public override void Start()
+    {
+        base.Start();
+        ListPositiveAspects();
+    }
+
+    private void ListPositiveAspects()
+    {
+        Random rand = new Random();
+        int itemsListed = 0;
+
+        Console.WriteLine("Think about this prompt:");
+        int promptIndex = rand.Next(prompts.Length);
+        Console.WriteLine(prompts[promptIndex]);
+        ShowSpinner(3);
+
+        Console.WriteLine("Start listing positive things:");
+
+        while (duration > 0)
+        {
+            Console.Write("Enter a positive item (or 'done' to finish): ");
+            string item = Console.ReadLine()?.Trim();
+
+            if (item.ToLower() == "done")
+                break;
+
+            itemsListed++;
+            duration--;
+        }
+
+        Console.WriteLine($"You listed {itemsListed} positive items.");
+    }
 }

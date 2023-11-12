@@ -7,6 +7,8 @@ class MindfulnessActivity
     protected string name;
     protected string description;
 
+    protected int duration;
+
     // ConstructorBuilder to initialize name and description
     public MindfulnessActivity(string name, string description)
     {
