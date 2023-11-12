@@ -9,14 +9,14 @@ class BreathingActivity : MindfulnessActivity
     public override void Start()
     {
         base.Start();
-        PerformBreathingExercise();
+        _PerformBreathingExercise();
     }
 
-    private void PerformBreathingExercise()
+    private void _PerformBreathingExercise()
     {
         Console.WriteLine("Breathe in...");
-        ShowSpinner(duration / 2);
+        _ShowSpinner(duration / 2);
         Console.WriteLine("Breathe out...");
-        ShowSpinner(duration / 2);
+        _ShowSpinner(duration / 2);
     }
 }

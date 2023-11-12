@@ -17,10 +17,10 @@ class ReflectionActivity : MindfulnessActivity
     public override void Start()
     {
         base.Start();
-        ReflectOnExperiences();
+        _ReflectOnExperiences();
     }
 
-    private void ReflectOnExperiences()
+    private void _ReflectOnExperiences()
     {
         Random rand = new Random();
 
@@ -28,7 +28,7 @@ class ReflectionActivity : MindfulnessActivity
         {
             int randomPromptIndex = rand.Next(prompts.Length);
             Console.WriteLine(prompts[randomPromptIndex]);
-            ShowSpinner(3);
+            _ShowSpinner(3);
 
             Console.WriteLine("Reflect on this experience:");
 
@@ -47,7 +47,7 @@ class ReflectionActivity : MindfulnessActivity
             foreach (string question in questions)
             {
                 Console.WriteLine(question);
-                ShowSpinner(3);
+                _ShowSpinner(3);
             }
 
             i += 3 + (questions.Length * 3); // 3 seconds for each question and its spinner

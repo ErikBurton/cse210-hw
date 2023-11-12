@@ -17,10 +17,10 @@ class ListingActivity : MindfulnessActivity
     public override void Start()
     {
         base.Start();
-        ListPositiveAspects();
+        _ListPositiveAspects();
     }
 
-    private void ListPositiveAspects()
+    private void _ListPositiveAspects()
     {
         Random rand = new Random();
         int itemsListed = 0;
@@ -28,7 +28,7 @@ class ListingActivity : MindfulnessActivity
         Console.WriteLine("Think about this prompt:");
         int promptIndex = rand.Next(prompts.Length);
         Console.WriteLine(prompts[promptIndex]);
-        ShowSpinner(3);
+        _ShowSpinner(3);
 
         Console.WriteLine("Start listing positive things:");
 
