@@ -12,7 +12,7 @@ public abstract class Goal
 
     protected int _value;
 
-    public int value
+    public int Value
     {
         get { return _value; }
         set { _value = value; }
