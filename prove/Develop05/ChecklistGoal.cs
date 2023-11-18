@@ -2,7 +2,7 @@
 public class ChecklistGoal : Goal // ChecklistGoal inherits from base class Goal
 {
     private int _targetCount; // Private field to store target count for checklist
-    private int _completdCount; // Private field to store completed count for checklist
+    private int _completedCount; // Private field to store completed count for checklist
 
     // Constructor to initialize ChecklistGoal with name, value and target count
     public ChecklistGoal(string name, int value, int targetCount)
