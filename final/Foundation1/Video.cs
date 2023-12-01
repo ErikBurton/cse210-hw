@@ -29,14 +29,17 @@ class Video {
     // Method to display video information and comments
     public void DisplayVideoInfo()
     {
+        Console.WriteLine();
         Console.WriteLine($"Title: {Title}");
         Console.WriteLine($"Author: {Author}");
         Console.WriteLine($"Length: {LengthInSeconds} seconds");
-        Console.WriteLine($"Number of Comments: {GetNumberOfComments}");
+        Console.WriteLine();
+        Console.WriteLine(new string('-', 40));
+        Console.WriteLine($"Number of Comments: {GetNumberOfComments()}");
 
         foreach (var comment in comments)
         {
-            Console.WriteLine($"Comment by {comment.CommenterName}: {comment.CommentText}");
+            Console.WriteLine($"Comment by: {comment.CommenterName}: {comment.CommentText}");
         }
 
         Console.WriteLine();
