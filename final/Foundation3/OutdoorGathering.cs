@@ -1,0 +1,5 @@
+// OutdoorGathering class
+class OutdoorGathering
+{
+    
+}

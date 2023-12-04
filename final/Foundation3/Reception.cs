@@ -1,0 +1,5 @@
+// Reception class
+class Reception
+{
+    
+}

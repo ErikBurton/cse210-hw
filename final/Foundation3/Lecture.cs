@@ -1,0 +1,5 @@
+// Lecture class
+class Lecture
+{
+    
+}
