@@ -8,12 +8,12 @@ class Address
     public string ZipCode { get; set; }
 
     // Constructor to initialize address properties
-    public Address(string street, string city, string state, string zipCode)
+    public Address(string _street, string _city, string _state, string _zipCode)
     {
-        Street = street;
-        City = city; 
-        State = state;
-        ZipCode = zipCode;
+        Street = _street;
+        City = _city; 
+        State = _state;
+        ZipCode = _zipCode;
     }
 
     // Override ToStirng method to format the address as a string
