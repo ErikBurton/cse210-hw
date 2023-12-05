@@ -6,14 +6,14 @@ class Program
     static void Main()
     {
         // Create instances of each event type
-        var lecture = new Lecture("Amazing Lecture", "A fascinating talk about something", DateTime.Now, new TimeSpan(14, 0, 0),
-            new Address("123 Main St", "Cityville", "State", "12345"), "John Doe", 50);
+        var lecture = new Lecture("Talk Like TED", "The 9 public-speaking secrets of the world's top minds", DateTime.Now, new TimeSpan(14, 0, 0),
+            new Address("76 Laura St", "Jacksonville", "FL", "92322"), "Carmine Gallo", 50);
 
-        var reception = new Reception("Grand Reception", "An elegant gathering", DateTime.Now.AddDays(7), new TimeSpan(18, 30, 0),
-            new Address("456 Oak St", "Townsville", "State", "67890"), "rsvp@example.com");
+        var reception = new Reception("Elder Mower's Homecoming", "Elder Mower returns from his LDS Mission", DateTime.Now.AddDays(7), new TimeSpan(18, 30, 0),
+            new Address("11253 Tippecanoe Way", "South Jordan", "UT", "84009"), "rsvp@example.com");
 
-        var outdoorGathering = new OutdoorGathering("Community Picnic", "Join us for fun and food", DateTime.Now.AddDays(14),
-            new TimeSpan(12, 0, 0), new Address("789 Pine St", "Villageton", "State", "56789"), "Sunny with a chance of rain");
+        var outdoorGathering = new OutdoorGathering("All Camaro Car Show", "All year Camaros welcome - Show off your shiny ride", DateTime.Now.AddDays(14),
+            new TimeSpan(12, 0, 0), new Address("2189 E Colorado Dr", "St. George", "UT", "84002"), "Sunny with a 100 % chance of cool cars!");
 
         // Generate and display marketing messages
         Console.WriteLine(lecture.GenerateStandardDetails());

@@ -1,7 +1,7 @@
 // Base Event class
 class Event
 {
-     private string _title;
+    private string _title;
     private string _description;
     private DateTime _date;
     private TimeSpan _time;
